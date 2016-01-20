@@ -1,5 +1,5 @@
 body {font-family: sans-serif;
-			background: #ecf0f1;
+			background: #000000;
 			line-height: 1.4;
 		 }
 
@@ -13,9 +13,10 @@ body {font-family: sans-serif;
 	flex-wrap:wrap;
 }
 .col {
-	background: #ccc;
-  padding: 30px;
-	margin: 10 10 10 10;
+	background: #ffffff;
+  padding: 50px;
+	width: 500px;
+	margin: 5 5 5 5;
 }
 .fluid {
 	flex: 1;
@@ -30,5 +31,5 @@ body {font-family: sans-serif;
 .container{
 	width:960px
 	height:900px;
-	background-color: #F1F1F1;
+	background-color: #000000;
 }
