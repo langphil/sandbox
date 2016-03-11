@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>html demo</title>
+
+<style>
+
+.red {
+  color: red;
+  }
+
+h3 {
+  font-family:helvetica;
+  line-height: 25px;
+}
+
+small {
+  font-family:helvetica;
+}
+
+p {
+  font-family:helvetica;
+}
+
+a {
+  font-family:helvetica;
+  text-decoration: none;
+  color: #f1f1f1;
+}
+
+i {
+  font-family:helvetica;
+  text-decoration: none;
+  color: #f1f1f1;
+}
+
+.box {
+  width:300px;
+  margin: 0px 0px 0px 10px;
+  padding:10px 30px 30px 30px;
+  border:2px;
+  background-color: #000000;
+  color: #ffffff;
+}
+  </style>
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+  var odln="http://contentapi.theodi.org/with_tag.json?keyword=open-banking";
+
+$.getJSON(odln, function(data) {
+
+    $('#title').text(data.results[0].title);
+    $('#auth').text(data.results[0].author.name);
+    $('#desc').text(data.results[0].details.description);
+    $("#append").href(data.results[0].web_url)
+
+});
+
+</script>
+
+</head>
+  <body>
+
+  <div class="box">
+    <div>
+      <a id="append" href="">
+        <h3 id="title"></h3>
+      </a>
+    </div>
+    <small id="auth"></small>
+    <p id="desc"></p>
+    <a id="append" href="" >
+      <i>Read more</i>
+    </a>
+  </div>
+
+</body>
+</html>
