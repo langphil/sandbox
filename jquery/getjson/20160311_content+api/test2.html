@@ -44,7 +44,7 @@ i {
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script>
 $(document).ready(function(){
-  var odln="http://contentapi.theodi.org/with_tag.json?keyword=open-banking";
+  var odln="http://contentapi.theodi.org/with_tag.json?keyword=event";
 
 $.getJSON(odln, function(data) {
     $("h1").html(data.results[0].title);
@@ -53,6 +53,7 @@ $.getJSON(odln, function(data) {
     $("a").href(data.results[0].web_url);
   });
 });
+debugger
 
 </script>
 
